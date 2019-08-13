@@ -18,11 +18,11 @@ export default class movieClassificationModel {
         this.Age = 0;
         this.Adult = false;
         this.Description = "";
-        this.default = false; 
+        this.default = false;
     }
 
-    public apiToModel(data){
-        
+    public apiToModel(data): movieClassificationModel{
+
         var classification = new movieClassificationModel();
 
         classification.Type = data.type;
@@ -34,10 +34,10 @@ export default class movieClassificationModel {
         classification.Description = data.description;
         classification.default = data.default;
 
-        return classification; 
+        return classification;
     }
 
-    public modelToApi(data){
+    public modelToApi(data) {
 
     }
 }

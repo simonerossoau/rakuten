@@ -11,7 +11,7 @@ export default class labelsModels {
         this.PurchaseTypes = undefined;
         this.VideoQuality = undefined;
     }
-    public apiToModel(data) {
+    public apiToModel(data):labelsModels {
 
         var labels = new labelsModels();
 

@@ -13,7 +13,7 @@ export default class movieImageModel {
         this.Ribbons = new ribbonsModel(); 
     }
 
-    public apiToModel(data){
+    public apiToModel(data):movieImageModel{
         
         var image = new movieImageModel();
 

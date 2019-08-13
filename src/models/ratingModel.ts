@@ -8,11 +8,13 @@ export default class ratingModel {
         this.Scale=0;
     }
 
-    public apiToModel(data) {
+    public apiToModel(data):ratingModel {
 
         var rating = new ratingModel();
 
         rating.Average = data.average;
         rating.Scale = data.scale;
+
+        return rating
     }
 }

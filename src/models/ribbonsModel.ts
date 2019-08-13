@@ -23,7 +23,7 @@ export default class ribbonsModels{
         this.Image = "";
     }
 
-    public apiToModel(data){
+    public apiToModel(data):ribbonsModels{
         
         var ribbons = new ribbonsModels();
 

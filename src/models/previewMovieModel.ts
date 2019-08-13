@@ -2,6 +2,7 @@ import movieClassificationModel from './movieClassificationModel';
 import movieImageModel from './movieImageModel';
 import labelsModel from './labelsModel';
 import ratingModel from './ratingModel';
+import highlightedScoreModel from './highlightedScoreModel';
 
 export default class previewMovieModel {
 
@@ -28,12 +29,12 @@ export default class previewMovieModel {
         this.Label_price = "";
         this.Classification = new movieClassificationModel();
         this.Images = new movieImageModel();
-        this.Highlighted_score = new higlightedScoreModel();
+        this.Highlighted_score = new highlightedScoreModel();
         this.Rating = new ratingModel();
         this.Labels = new labelsModel;
     }
 
-    public apiToModel(data) {
+    public apiToModel(data): previewMovieModel {
 
         var movie = new previewMovieModel();
 
