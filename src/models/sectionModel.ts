@@ -1,6 +1,24 @@
 import contentsElement from './contentsElement';
+import additionalImageModel from './additionalImageModel';
 
-export default class categoryListPreviewsModel {
+export interface ISectionModel {
+    Type: string;
+    Text_id: string;
+    Numerical_id: number;
+    Category: string;
+    Short_name: string;
+    Content_type: string;
+    Is_b2b: boolean;
+    Wktv: any;
+    Only_cupon: boolean;
+    Kind: string;
+    Is_recomendation: boolean;
+    Name: string;
+    Additional_images: additionalImageModel;
+    Contents: contentsElement;
+}
+
+export default class SectionModel {
 
     public Type: string;
     public Text_id: string;
@@ -14,7 +32,7 @@ export default class categoryListPreviewsModel {
     public Kind: string;
     public Is_recomendation: boolean;
     public Name: string;
-    public Additional_images: any;
+    public Additional_images: additionalImageModel;
     public Contents: contentsElement;
 
     constructor() {
@@ -31,13 +49,13 @@ export default class categoryListPreviewsModel {
         this.Kind = "";
         this.Is_recomendation = false;
         this.Name = "";
-        this.Additional_images = undefined;
+        this.Additional_images = new additionalImageModel();
         this.Contents = new contentsElement();
 
     }
 
-    public apiToModel(data): categoryListPreviewsModel {
-        var categoryList = new categoryListPreviewsModel();
+    public static apiToModel(data): ISectionModel {
+        var categoryList = new SectionModel();
 
         categoryList.Type = data.lists;
         categoryList.Text_id = data.id;

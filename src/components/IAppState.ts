@@ -1,5 +1,7 @@
-import previewMovieModel from "src/models/previewMovieModel";
+import ISectionModel from "../models/sectionModel";
 
 export default interface IAppState {
-    previewMovie: previewMovieModel,
+    sectionData: ISectionModel,
+    sliderData: any[],
+    bannersData: any[]
 }

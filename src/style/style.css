@@ -1,0 +1,522 @@
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body *, body :after, body :before {
+    box-sizing: border-box;
+    outline: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (min-width: 1140px) {
+    body #root {
+        max-width: 1680px;
+    }
+}
+
+@media (min-width: 1025px) {
+    body #root {
+        padding-top: 60px;
+        padding-bottom: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: #000;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .8) 0, rgba(0, 0, 0, .7) 20%, rgba(0, 0, 0, .4) 50%, transparent 100%);
+    z-index: 200;
+}
+
+@media (min-width: 1025px) {
+    .nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: auto;
+        background: #000;
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
+    }
+}
+
+.nav__items {
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    padding: 10px 10px 0;
+    max-width: 1680px;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+@media (min-width: 1025px) {
+    .navmenu__parent {
+        margin-right: 20px;
+        width: auto;
+    }
+}
+
+.nav__items__logo {
+    -webkit-order: 1;
+    order: 1;
+    -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .6));
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, .6));
+}
+
+.nav__items__menu {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    background-color: #000;
+    -webkit-transform: translate3D(0, 0, 0);
+    transform: translate3D(0, 0, 0);
+    z-index: 200;
+}
+
+@media (min-width: 1025px) {
+    .nav__items__menu {
+        -webkit-order: 2;
+        order: 2;
+        position: relative;
+        top: 0;
+        height: auto;
+        background-color: transparent;
+    }
+}
+
+@media (min-width: 560px) {
+    .nav__items {
+        padding: 10px 20px 0;
+    }
+}
+
+@media (min-width: 1025px) {
+    .nav__items {
+        padding: 0 20px;
+    }
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.navmenu__parent__child {
+    display: none;
+    position: absolute;
+    margin-left: -15px;
+    padding: 0 15px;
+    background-color: #000;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 3px 10px -4px rgba(0, 0, 0, .8);
+}
+
+.navmenu__parent--with-childs:hover .navmenu__parent__child {
+    display: block;
+}
+
+.nav__items__logo__link {
+    display: inline-block;
+    margin-top: 7px;
+    width: 122px;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.nav__items__logo__link svg {
+    width: 100%;
+    height: 100%;
+    max-height: 60px;
+}
+
+.navmenu__parent__child__item__anchor {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: block;
+    padding: 10px 0;
+    color: #fff;
+    font-family: Roboto-Regular, Arial, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: color .1s ease;
+}
+
+@media (min-width: 1025px) {
+    .navmenu__parent__child__item__anchor {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .navmenu__parent {
+        margin-right: 20px;
+        width: auto;
+    }
+}
+
+@media (min-width: 1025px) {
+    .navmenu__parent--with-childs {
+        margin-right: 15px;
+    }
+}
+
+@media (min-width: 1025px) {
+    li.navmenu__parent.navmenu__parent--store.navmenu__parent--with-childs {
+        margin-left: 20px;
+    }
+}
+
+.navmenu__parent__anchor {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: block;
+    padding: 5px;
+    color: #999;
+    transition: color .1s ease;
+}
+
+.button--micro, .iconed-action, .inappnotif__list__item, .navmenu__parent__child__item {
+    white-space: nowrap;
+}
+
+@media (min-width: 1025px) {
+    .navmenu__parent__anchor {
+        padding: 22px 0;
+        text-align: center;
+        color: #fff;
+    }
+}
+
+@media (min-width: 1025px) {
+    .navmenu__parent__anchor__text {
+        display: inline-block;
+        font-size: 14px;
+        text-align: left;
+    }
+}
+
+.navmenu {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 -5px 15px 0 rgba(0, 0, 0, .5);
+}
+
+@media (min-width: 1025px) {
+    .navmenu {
+        -webkit-justify-content: initial;
+        justify-content: initial;
+        border-top: none;
+        box-shadow: none;
+    }
+}
+
+.navmenu__parent:hover .navmenu__parent__anchor {
+    color: #ffe300;
+}
+
+.navmenu__parent__child__item__anchor:hover {
+    color: #ffe300;
+}
+
+@media (min-width: 1025px) {
+    .navmenu__parent--with-childs .navmenu__parent__anchor:after {
+        display: inline-block;
+        content: '▼';
+        position: relative;
+        bottom: 1px;
+        margin-left: 4px;
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .navmenu__parent--with-childs:hover .navmenu__parent__anchor:after {
+        content: '▲';
+    }
+}
+
+@media (min-width: 1025px) {
+    .navmenu__parent:nth-child(2), .root__wrapper--b2b .navmenu__parent:nth-child(1) {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .navmenu__parent--with-childs {
+        margin-right: 15px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .navmenu__parent {
+        margin-right: 20px;
+        width: auto;
+    }
+}
+
+/*container*/
+
+.contents {
+    background: #171717;
+}
+
+.slider__wrapper {
+    background-size: 100%;
+}
+
+.slider {
+    position: relative;
+    background: #171717;
+    background-image: url(https://prod1-kraken-cloudfront.rakuten.tv/images/placeholders/dots-94daba107d.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.slider:before, .slider__item__image:before {
+    content: '';
+    padding-top: 39.9%;
+}
+
+.slider, .slider:before {
+    display: block;
+}
+
+.slider__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.slider__item__image {
+    background-size: 100%;
+}
+
+a.slick-slide .slider__item {
+    outline: none;
+    width: 1286px;
+    opacity: 1;
+    visibility: visible;
+    outline: none;
+    position: relative;
+    left: 0px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1000ms ease 0s, visibility 1000ms ease 0s;
+    width: 1286px;
+}
+
+/*arrows*/
+
+@media (min-width: 1140px) {
+    .slider .slick-arrow:before {
+        font-size: 51px;
+    }
+}
+
+@media (min-width: 910px) {
+    .slider .slick-arrow:before {
+        font-size: 45.9px;
+    }
+}
+
+.slider .slick-prev:before {
+    left: 20px;
+    content: '\e637';
+}
+
+.slider .slick-next:before {
+    right: 20px;
+    content: '\e638';
+}
+
+.slider, .slider .slick-active {
+    z-index: 1;
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    color: transparent;
+    background-color: transparent;
+    opacity: 0;
+    transition: opacity .3s ease;
+    will-change: opacity;
+    z-index: 2;
+}
+
+.slider .slick-arrow, .slider .slick-dots li button {
+    line-height: 0;
+    border: none;
+    cursor: pointer;
+    outline: 0;
+}
+
+@media (min-width: 1140px) {
+    .slider .slick-arrow {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.slick-arrow {
+    display: block
+}
+
+.slider .slick-arrow:before {
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    font-family: Glyphs;
+    font-size: 42.5px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .8);
+}
+
+.slider .slick-prev {
+    left: 0;
+}
+
+.slider .slick-next {
+    right: 0;
+}
+
+.slider .slick-slider:hover .slick-arrow {
+    opacity: 1;
+}
+
+.slider .slick-slider {
+    position: relative;
+}
+
+@media (min-width: 910px) {
+    .slider:before, .slider__item__image:before {
+        padding-top: 30%;
+    }
+}
+
+/*section banners*/
+
+.section.section--banners {
+    margin-top: 25px;
+    padding: 0 15px 30px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list__item {
+    width: 20%;
+    display: inline-block;
+    padding: 5px;
+}
+
+.artwork__image {
+    width: 100%;
+}
+
+.list__item:hover {
+    background: #ffe300;
+}
+
+/*categories sliders*/
+
+.section {
+    padding: 0 15px 30px 15px;
+}
+
+.section__title {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: -webkit-flex;
+    display: flex;
+    margin-right: 5px;
+    margin-bottom: 7px;
+    margin-left: 5px;
+    color: #fff;
+    font-family: Rakuten-Bold, Arial, sans-serif;
+    font-size: 14px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .8);
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+@media (min-width: 1140px) {
+    .section__title {
+        margin-right: 5px;
+        margin-bottom: 15px;
+        margin-left: 5px;
+        font-size: 22px;
+    }
+}
+
+.section__title a {
+    color: white;
+}
+
+.section__title__link--action {
+    display: inline;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.section--list {
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.garden-list__item {
+    width: 15%
+}
+
+.list__item .score {
+    padding-top: 7px;
+    height: 24px;
+    width: 100%;
+}
+
+.score__wrapper {
+    text-align: center;
+}
+.score__rate {
+    margin-right: 10px;
+    color: #ffe300;
+}
+.score__counter {
+    color: #ccc;
+}
+
+a.artwork {
+    background-image: url("https://prod1-kraken-cloudfront.rakuten.tv/images/placeholders/covers/negative-landscape_midget-75f90ea3b6.png")
+}
+
+.footer {
+    height: 300px;
+    background: #212121;
+}

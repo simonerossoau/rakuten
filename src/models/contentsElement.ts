@@ -2,18 +2,18 @@ import previewMovieModel from './previewMovieModel';
 
 export default class contentsElement {
 
-    public Data: previewMovieModel[];
+    public data: previewMovieModel[];
     public Meta: any;
 
     constructor() {
-        this.Data = [];
+        this.data = [];
         this.Meta = undefined;
     }
 
     public apiToModel(data): contentsElement {
         var element = new contentsElement();
 
-        element.Data = data.data;
+        element.data = data.data;
         element.Meta = data.meta;
 
         return element;

@@ -14,7 +14,7 @@ export default class previewMovieModel {
     public Duration: number;
     public Label_price: string;
     public Classification: movieClassificationModel;
-    public Images: movieImageModel;
+    public images: movieImageModel;
     public Highlighted_score: highlightedScoreModel;
     public Rating: ratingModel;
     public Labels: labelsModel;
@@ -28,7 +28,7 @@ export default class previewMovieModel {
         this.Duration = 0;
         this.Label_price = "";
         this.Classification = new movieClassificationModel();
-        this.Images = new movieImageModel();
+        this.images = new movieImageModel();
         this.Highlighted_score = new highlightedScoreModel();
         this.Rating = new ratingModel();
         this.Labels = new labelsModel;
@@ -46,7 +46,7 @@ export default class previewMovieModel {
         movie.Duration = data.duration;
         movie.Label_price = data.label;
         movie.Classification = data.classification;
-        movie.Images = data.images;
+        movie.images = data.images;
         movie.Highlighted_score = data.highlighted_score;
         movie.Rating = data.rating;
         movie.Labels = data.labels;
