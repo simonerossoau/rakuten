@@ -428,10 +428,49 @@ a.slick-slide .slider__item {
     justify-content: space-between;
 }
 
+@media (max-width:1025px) {
+    .section.section--banners {
+        display: inline-block;
+        white-space: nowrap;
+        overflow-x: scroll;
+        max-width: 100%;
+    }
+}
+
+@media (max-width:560px) {
+    .section.section--banners {
+        padding: 0;
+    }
+}
+
 .list__item {
     width: 20%;
     display: inline-block;
     padding: 5px;
+}
+
+@media(max-width:1025px) and (min-width:910px) {
+    .list__item {
+        width: 23%
+    }
+}
+
+@media(max-width:910px) and (min-width:730px) {
+    .list__item {
+        width: 30%
+    }
+}
+
+@media(max-width:730px) and (min-width:560px) {
+    .list__item {
+        width: 40%
+    }
+}
+
+@media(max-width:560px) {
+    .list__item {
+        width: 58%
+    }
 }
 
 .artwork__image {
@@ -446,6 +485,12 @@ a.slick-slide .slider__item {
 
 .section {
     padding: 0 15px 30px 15px;
+}
+
+@media(max-width :560px) {
+    .section {
+        padding: 0;
+    }
 }
 
 .section__title {
@@ -489,10 +534,29 @@ a.slick-slide .slider__item {
     display: inline-block;
     white-space: nowrap;
     overflow-x: scroll;
+    max-width: 100%
 }
 
 .garden-list__item {
-    width: 15%
+    width: 41.6%
+}
+
+@media(max-width:910px) and (min-width:730px) {
+    .garden-list__item {
+        width: 22%;
+    }
+}
+
+@media (max-width: 730px) and (min-width: 560px) {
+    .garden-list__item {
+        width: 28%;
+    }
+}
+
+@media (min-width:910px) {
+    .garden-list__item {
+        width: 18%
+    }
 }
 
 .list__item .score {
@@ -504,10 +568,12 @@ a.slick-slide .slider__item {
 .score__wrapper {
     text-align: center;
 }
+
 .score__rate {
     margin-right: 10px;
     color: #ffe300;
 }
+
 .score__counter {
     color: #ccc;
 }

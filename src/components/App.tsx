@@ -1,20 +1,20 @@
 import * as React from 'react';
 
 import { connect } from 'react-redux';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import IAppState from './IAppState';
-import SectionModel, { ISectionModel } from "../models/sectionModel";
+import SectionModel from "../models/sectionModel";
 
 //import components
 import LogoItem from './Nav/logo'
 import Section from '../components/Section/Section';
-
-import '../style/style.css';
 import MenuItem from './Nav/menu';
 import MainSlider from './MainSlider/MainSlider';
 import Banners from './Banners/Banners';
 
 import * as c from '../models/constants'
+import '../style/style.css';
 
 class App extends React.Component<{}, IAppState> {
 
