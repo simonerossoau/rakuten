@@ -25,6 +25,8 @@ class App extends React.Component<{}, IAppState> {
       sliderData: undefined,
       bannersData: undefined,
       sectionData: c.defaultSection,
+      sectionData1: c.defaultSection,
+      sectionData2: c.defaultSection
     }
   }
 
@@ -49,16 +51,54 @@ class App extends React.Component<{}, IAppState> {
       });
 
     //API call for gardens
-    fetch(c.proxyUrl + c.basePath + c.categories[0] + c.tailPath)
-      .then((response) => {
-        return response.json();
-      })
-      .then((videos) => {
-        let dataVideos: SectionModel = SectionModel.apiToModel(videos.data)
-        this.setState({ sectionData: dataVideos })
-      }).catch(function (err) {
-        console.error(err);
-      });
+/*     c.categories.forEach(element => {
+
+      fetch(c.proxyUrl + c.basePath + element+ c.tailPath)
+        .then((response) => {
+          return response.json();
+        })
+        .then((videos) => {
+          let dataVideos: SectionModel = SectionModel.apiToModel(videos.data)
+          let auxGardenList = this.state.sectionData;
+          auxGardenList.push(dataVideos);
+          this.setState({ sectionData: auxGardenList })
+        }).catch(function (err) {
+          console.error(err);
+        });
+    }); */
+
+    fetch(c.proxyUrl + c.basePath + c.categories[0]+ c.tailPath)
+    .then((response) => {
+      return response.json();
+    })
+    .then((videos) => {
+      let dataVideos: SectionModel = SectionModel.apiToModel(videos.data)
+      this.setState({ sectionData: dataVideos })
+    }).catch(function (err) {
+      console.error(err);
+    });
+
+    fetch(c.proxyUrl + c.basePath + c.categories[1]+ c.tailPath)
+    .then((response) => {
+      return response.json();
+    })
+    .then((videos) => {
+      let dataVideos: SectionModel = SectionModel.apiToModel(videos.data)
+      this.setState({ sectionData1: dataVideos })
+    }).catch(function (err) {
+      console.error(err);
+    });
+
+    fetch(c.proxyUrl + c.basePath + c.categories[2]+ c.tailPath)
+    .then((response) => {
+      return response.json();
+    })
+    .then((videos) => {
+      let dataVideos: SectionModel = SectionModel.apiToModel(videos.data)
+      this.setState({ sectionData2: dataVideos })
+    }).catch(function (err) {
+      console.error(err);
+    });
 
   }
 
@@ -74,7 +114,14 @@ class App extends React.Component<{}, IAppState> {
         <div className="contents">
           <MainSlider sliderData={this.state.sliderData} />
           <Banners bannersData={this.state.bannersData} />
+          {/* {
+            this.state.sectionData.map((item, index) => {
+              <Section key={index} sectionData={item} />
+            })
+          } */}
           <Section sectionData={this.state.sectionData} />
+          <Section sectionData={this.state.sectionData1} />
+          <Section sectionData={this.state.sectionData2} />
         </div>
         <div className="footer">
           <div className="footer-info"></div>

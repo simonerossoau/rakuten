@@ -10,14 +10,18 @@ class SectionList extends React.Component<ISectionListProps, {}> {
     }
 
     render() {
+        var ctrans = 'translateX(' + this.props.translate + '%)';
+        var myStyle = {
+            transform: ctrans
+        }
         return (
-            <div className="section section--list">
+            <div className="section--list" style={myStyle}>
                 {this.props.contents.data !== undefined && this.props.contents.data.map((element, index) =>
-                    <SectionItem item={element} key={index}/>
-                )}
-            </div>
-        )
-    }
-}
-
+                <SectionItem item={element} key={index} />
+            )}
+            </ div>
+                )
+            }
+        }
+        
 export default SectionList

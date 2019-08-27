@@ -6,7 +6,6 @@ export const categories: string[] = [
     'estrenos-imprescindibles-en-taquilla',
     'estrenos-espanoles',
     'si-te-perdiste',
-    'especial-x-men',
     'nuestras-preferidas-de-la-semana']
 
 export const proxyUrl: string = 'https://polar-meadow-42409.herokuapp.com/';

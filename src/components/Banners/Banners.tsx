@@ -10,12 +10,14 @@ class Banners extends React.Component<IBannersProps, {}>{
     render() {
         return (
             <div className="section section--banners">
-                {this.props.bannersData !== undefined && this.props.bannersData.map((item, index) =>
-                    <div key={index} className="list__item">
-                        <a className="artwork">
-                             <img className="artwork__image" src={item.image}/> 
-                        </a>
-                    </div>)}
+                <div className="banner-list">
+                    {this.props.bannersData !== undefined && this.props.bannersData.map((item, index) =>
+                        <div key={index} className="list__item">
+                            <a className="artwork">
+                                <img className="artwork__image" src={item.image} />
+                            </a>
+                        </div>)}
+                </div>
             </div>
         )
     }
