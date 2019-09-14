@@ -9,7 +9,7 @@ export const categories: string[] = [
     'nuestras-preferidas-de-la-semana']
 
 export const proxyUrl: string = 'https://polar-meadow-42409.herokuapp.com/';
-export const basePath: string = "https://gizmo.rakuten.tv/v3/lists/";
+export const basePath: string = "https://gizmo.rakuten.tv/v3/";
 export const tailPath: string = "?classification_id=3&device_identifier=web&locale=es&market_code=es";
 
 export const SliderPath: string = "https://gizmo.rakuten.tv/v3/gardens/default?classification_id=5&device_identifier=web&locale=es&market_code=es&user_status=visitor";

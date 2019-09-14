@@ -22,29 +22,3 @@ class MainSlider extends React.Component<IMainSliderProps, IMainSliderState>{
 }
 
 export default MainSlider
-
-
-{/* <div className="slick-initialized slick-slider">
-<button
-    type="button"
-    data-role="none"
-    className="slick-arrow slick-prev"> Previous</button>
-<div className="slick-list">
-    <div
-        className="slick-track"
-        style={{ opacity: 1, width: "14789px" }}>
-        <a className="slick-slide slider__item"
-            href=""
-            target="_self">
-            <div
-                className="slider__item__image"
-                style={{ backgroundImage: `url(${this.state.imgArray[0]})` }}>
-            </div>
-        </a>
-    </div>
-</div>
-<button
-    type="button"
-    data-role="none"
-    className="slick-arrow slick-next"> Next</button>
-</div> */}

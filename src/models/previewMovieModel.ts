@@ -6,8 +6,8 @@ import highlightedScoreModel from './highlightedScoreModel';
 
 export default class previewMovieModel {
 
-    public Type: string;
-    public Text_id: string;
+    public type: string;
+    public id: string;
     public Numerical_id: number;
     public Title: string;
     public Year: number;
@@ -20,8 +20,8 @@ export default class previewMovieModel {
     public Labels: labelsModel;
 
     constructor() {
-        this.Type = "";
-        this.Text_id = "";
+        this.type = "";
+        this.id = "";
         this.Numerical_id = 0;
         this.Title = "";
         this.Year = 0;
@@ -38,8 +38,8 @@ export default class previewMovieModel {
 
         var movie = new previewMovieModel();
 
-        movie.Type = data.type;
-        movie.Text_id = data.id;
+        movie.type = data.type;
+        movie.id = data.id;
         movie.Numerical_id = data.numerical_id;
         movie.Title = data.title;
         movie.Year = data.year;

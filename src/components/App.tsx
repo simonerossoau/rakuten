@@ -67,7 +67,7 @@ class App extends React.Component<{}, IAppState> {
         });
     }); */
 
-    fetch(c.proxyUrl + c.basePath + c.categories[0]+ c.tailPath)
+    fetch(c.proxyUrl + c.basePath + "lists/" + c.categories[0]+ c.tailPath)
     .then((response) => {
       return response.json();
     })
@@ -78,7 +78,7 @@ class App extends React.Component<{}, IAppState> {
       console.error(err);
     });
 
-    fetch(c.proxyUrl + c.basePath + c.categories[1]+ c.tailPath)
+    fetch(c.proxyUrl + c.basePath + "lists/" + c.categories[1]+ c.tailPath)
     .then((response) => {
       return response.json();
     })
@@ -89,7 +89,7 @@ class App extends React.Component<{}, IAppState> {
       console.error(err);
     });
 
-    fetch(c.proxyUrl + c.basePath + c.categories[2]+ c.tailPath)
+    fetch(c.proxyUrl + c.basePath + "lists/" + c.categories[2]+ c.tailPath)
     .then((response) => {
       return response.json();
     })
