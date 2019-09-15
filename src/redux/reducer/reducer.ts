@@ -1,10 +1,10 @@
 import {Reducer, combineReducers} from 'redux'
 import { Action, ActionTypes } from '../actions';
 
-import { successReducer } from '.';
+import { rakutenReducer } from '.';
 
 const appReducer = combineReducers({
-    successReducer
+    rakuten : rakutenReducer,
 })
 
 export default appReducer

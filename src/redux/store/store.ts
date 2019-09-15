@@ -1,10 +1,8 @@
-import { applyMiddleware, createStore, Store } from 'redux';
+import { applyMiddleware, createStore, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 
 import appReducer from '../reducer/reducer';
-
-var newsSateStore: Store;
 
 const logger = createLogger({
   collapsed: true

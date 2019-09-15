@@ -8,6 +8,7 @@ import ScoreItem from '../ScoreItem/ScoreItem'
 import movieModel from './../../../models/movieModel';
 
 import * as c from './../../../models/constants'
+import { Link } from 'react-router-dom';
 
 var movie = new movieModel();
 
@@ -64,18 +65,21 @@ class SectionItem extends React.Component<ISectionItemProps, ISectionItemState> 
         return (
             <React.Fragment>
                 <div className="list__item garden-list__item">
+                    <Link to={"/movies/" + this.props.item.id}>
                     {this.state.isTooltipOpen &&
-                        <Tooltip
-                            movie={this.state.data}
-                            backgroundImage={this.props.item.images.snapshot}
-                            tooltipPosition={this.state.tooltipPosition} />}
-                    <div className="hoverable"
-                        onMouseEnter={this.openTooltip}
-                        onMouseLeave={this.closeTooltip}>
-                        <a className="artwork">
-                            <img className="artwork__image" src={this.props.item.images.artwork} />
-                        </a>
-                    </div>
+                            <Tooltip
+                                movie={this.state.data}
+                                backgroundImage={this.props.item.images.snapshot}
+                                tooltipPosition={this.state.tooltipPosition}
+                            />}
+                        <div className="hoverable"
+                            onMouseEnter={this.openTooltip}
+                            onMouseLeave={this.closeTooltip}>
+                            <a className="artwork">
+                                <img className="artwork__image" src={this.props.item.images.artwork} />
+                            </a>
+                        </div>
+                    </Link>
                     <ScoreItem />
                 </div>
             </React.Fragment>

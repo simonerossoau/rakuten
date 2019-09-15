@@ -198,7 +198,7 @@ ol, ul {
 
 @media (min-width: 1025px) {
     .navmenu__parent__anchor {
-        padding: 22px 0;
+        padding: 20px 0;
         text-align: center;
         color: #fff;
     }
