@@ -11,9 +11,7 @@
 # Documentation
 
 
-## Deployment
 
-npm run deploy
 
 ## Built With
 
@@ -37,6 +35,11 @@ V 1.0.0
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 
+## Deployment
+
+npm run deploy
+
+
 ## Getting Started
 
 
@@ -47,7 +50,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 
 ## Contributing
-
-
-
-
