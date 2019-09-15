@@ -7,18 +7,12 @@ const movie = new movieModel();
 
 export const initialState: IRakutenGlobalState = {
     ready: false,
-    movieDetails: movie
+    movieDetails: ""
 };
 
-//Immutable State.
-export class RakutenGlobalState extends Immutable.Record(initialState) implements IRakutenGlobalState {
+export class RakutenGlobalState {
 
-    //Getters  
-    public readonly ready: boolean;
-    public readonly movieDetails: movieModel;
+    ready: boolean;
+    movieDetails: string;
 
-    //Functions
-    public setReady(ready: boolean): RakutenGlobalState {
-        return this.set("ready", ready) as RakutenGlobalState;
-    }
 }

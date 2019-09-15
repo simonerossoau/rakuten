@@ -1,10 +1,9 @@
 import {Reducer, combineReducers} from 'redux'
-import { Action, ActionTypes } from '../actions';
 
-import { rakutenReducer } from '.';
+import { movieReducer } from '.';
 
 const appReducer = combineReducers({
-    rakuten : rakutenReducer,
+    movieReducer : movieReducer,
 })
 
 export default appReducer

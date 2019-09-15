@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { connect } from 'react-redux'
 
 import ISectionItemProps from './ISectionItemProps';
 import ISectionItemState from './ISectionItemState';
@@ -9,8 +10,15 @@ import movieModel from './../../../models/movieModel';
 
 import * as c from './../../../models/constants'
 import { Link } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
+import { setMovieDetails } from '../../../redux/actions/rakutenActions'
 
 var movie = new movieModel();
+
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ setMovieDetails: setMovieDetails }, dispatch)
+}
 
 class SectionItem extends React.Component<ISectionItemProps, ISectionItemState> {
     constructor(props) {
@@ -36,7 +44,6 @@ class SectionItem extends React.Component<ISectionItemProps, ISectionItemState> 
             })
             .then((movie) => {
                 let dataMovie: movieModel = movieModel.apiToModel(movie.data)
-                console.log(dataMovie)
                 this.setState({ data: dataMovie });
             })
             .then(() => this.setState({ isTooltipOpen: true }))
@@ -65,8 +72,8 @@ class SectionItem extends React.Component<ISectionItemProps, ISectionItemState> 
         return (
             <React.Fragment>
                 <div className="list__item garden-list__item">
-                    <Link to={"/movies/" + this.props.item.id}>
-                    {this.state.isTooltipOpen &&
+                    <Link to={"/movies/"} onClick={() => this.props.setMovieDetails(this.props.item.id)}>
+                        {this.state.isTooltipOpen &&
                             <Tooltip
                                 movie={this.state.data}
                                 backgroundImage={this.props.item.images.snapshot}
@@ -87,4 +94,4 @@ class SectionItem extends React.Component<ISectionItemProps, ISectionItemState> 
     }
 }
 
-export default SectionItem
+export default connect(undefined, mapDispatchToProps)(SectionItem)
